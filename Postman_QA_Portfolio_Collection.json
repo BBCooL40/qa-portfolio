@@ -1,0 +1,85 @@
+{
+    "info": {
+        "name": "QA Portfolio - Demo API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Login (POST)",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "url": {
+                    "raw": "https://dummyjson.com/auth/login",
+                    "host": [
+                        "https://dummyjson.com"
+                    ],
+                    "path": [
+                        "auth",
+                        "login"
+                    ]
+                },
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"username\": \"kminchelle\",\n    \"password\": \"0lelplR\"\n}"
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get User Profile (GET)",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer {{token}}"
+                    }
+                ],
+                "url": {
+                    "raw": "https://dummyjson.com/auth/me",
+                    "host": [
+                        "https://dummyjson.com"
+                    ],
+                    "path": [
+                        "auth",
+                        "me"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Add Product (POST)",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "url": {
+                    "raw": "https://dummyjson.com/products/add",
+                    "host": [
+                        "https://dummyjson.com"
+                    ],
+                    "path": [
+                        "products",
+                        "add"
+                    ]
+                },
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"title\": \"New QA Product\",\n    \"price\": 10,\n    \"description\": \"Test item from portfolio\"\n}"
+                }
+            },
+            "response": []
+        }
+    ]
+}
